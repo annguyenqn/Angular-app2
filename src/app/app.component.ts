@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,Input,OnInit } from '@angular/core';
+import {student} from 'src/app/models/students'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

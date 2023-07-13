@@ -1,0 +1,16 @@
+.child {
+    border: 2px gray;
+    padding: 20px;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+
+button {
+    margin-left: 5px;
+    padding: 5 10px;
+    color: blue;
+}

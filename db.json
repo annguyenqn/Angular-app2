@@ -1,0 +1,15 @@
+{
+    "student": [{
+        "id": 1,
+        "name": "An",
+        "pass": false
+    }, {
+        "id": 2,
+        "name": "Hung",
+        "pass": true
+    }, {
+        "id": 3,
+        "name": "Tan",
+        "pass": false
+    }]
+}

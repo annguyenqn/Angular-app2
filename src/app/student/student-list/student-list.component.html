@@ -1,0 +1,20 @@
+<app-student-detail *ngFor="let student of students" [detail]="student" (remove)="handleRemove($event)"></app-student-detail>
+<div [class.list-student]=>
+    <h3>This is list-student</h3>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Index</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students; let i = index">
+                <td class="student-td">
+                    {{i}}:{{student.name}}
+                </td>
+                <td class="student-td">
+                    <!-- [ngClass]="{'cool-bool': student.pass}" {{i}}:{{student.name}} -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
