@@ -1,0 +1,28 @@
+<form #form="ngForm" (ngSubmit)="handleSubmit(form)">
+    Student name:
+    <input type="text" [(ngModel)]="student.name" name="name" />
+    <!-- <label>
+      <input type="radio" name='pass' [value]="true" [(ngModel) ="student.pass"]/>
+    </label>
+    <label>
+      <input type="radio" name='pass' [value]="false" [(ngModel) ="student.pass"] (ngModelChange)="studentPass($event)"/>
+    </label> -->
+    <input type="radio" name="pass" #studentName="ngModel" [value]="true" [(ngModel)]="student.pass" />
+    <input type="radio" name="pass" [value]="false" [(ngModel)]="student.pass" (ngModelChange)="studentPass($event)" /> student is stupid
+    <label>
+      <input type="checkbox" name="acceptTerms" id="acceptTerms" class="form-check-input" required [(ngModel)]="student.acceptTerms">Accept Terms?
+    </label>
+
+    <label>
+      Student Type:
+      <select name="studentType" [ngModel]="student?.name">
+        <option *ngFor="let type of studentType" [value]="type.key" [selected]="type.value === student.type">{{ type.value }}</option>
+      </select>
+    </label>
+    <button type="submit">Save</button>
+    <button type="button" (click)="back()">Go Back</button>
+</form>
+<div>
+    MODEL: {{student | json}} ERRORS: FORM: {{ form.value | json }}
+    <div *ngIf="!studentName.pristine">NOT PRISTINE!</div>
+</div>

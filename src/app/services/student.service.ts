@@ -13,5 +13,9 @@ constructor(private http:HttpClient) {
  getStudent():Observable<student[]>{
   return this.http.get<student[]>(STUDENT_API)
  }
+ getAStudent(id: number){
+  return this.http.get<student>(`${STUDENT_API}/1`)
+ }
+
 
 }

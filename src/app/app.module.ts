@@ -7,16 +7,21 @@ import { BindingComponent } from './binding/binding.component';
 import { StudentModule } from './student/student.module';
 import { StudentService } from './services/student.service';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentTemplateFormComponent } from './student/student-template-form/student-template-form.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './Home/Home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BindingComponent
-  ],
+    BindingComponent,
+    HomeComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StudentModule,
     HttpClientModule,
+    FormsModule,
+    StudentModule,
   ],
   providers: [
     StudentService,
