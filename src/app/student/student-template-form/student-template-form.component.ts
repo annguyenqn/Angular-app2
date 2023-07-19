@@ -28,15 +28,15 @@ export class StudentTemplateFormComponent implements OnInit {
     console.log(object)
   }
   ngOnInit() {
-    this.student = {} as student;
+    this.student = {} as student
     this.route.params.subscribe((data: Params) => {
         return this.studentService.getAStudent(data['id']).subscribe((data: student) => {
-          this.student = data;
+          this.student = data
       });
     })
   }
   handleSubmit(object: any) {
-    console.log(object);
+    console.log(object)
   }
   back() : void {
     this.router.navigate(['/student'])

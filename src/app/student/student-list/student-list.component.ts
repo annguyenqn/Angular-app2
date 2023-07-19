@@ -9,6 +9,7 @@ import { student } from 'src/app//models/students';
 })
 export class StudentListComponent implements OnInit {
   students: student[] = []
+
   constructor(private studentService: StudentService) {
 
 

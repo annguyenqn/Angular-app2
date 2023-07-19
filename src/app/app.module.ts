@@ -10,11 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentTemplateFormComponent } from './student/student-template-form/student-template-form.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './Home/Home.component';
+
+import { ChangeDetectionComponent } from './ChangeDetection/ChangeDetection.component';
+import { AppChanelComponent } from './appChanel/appChanel.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     BindingComponent,
     HomeComponent,
+      ChangeDetectionComponent,
+      AppChanelComponent
    ],
   imports: [
     BrowserModule,
