@@ -13,13 +13,16 @@ import { HomeComponent } from './Home/Home.component';
 
 import { ChangeDetectionComponent } from './ChangeDetection/ChangeDetection.component';
 import { AppChanelComponent } from './appChanel/appChanel.component';
+import { Observable } from 'rxjs';
+import { ObservableComponent } from './RXJS/Observable/Observable.component';
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     BindingComponent,
     HomeComponent,
-      ChangeDetectionComponent,
-      AppChanelComponent
+    ChangeDetectionComponent,
+    AppChanelComponent,
+    ObservableComponent,
    ],
   imports: [
     BrowserModule,
