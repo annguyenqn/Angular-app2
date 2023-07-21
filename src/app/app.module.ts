@@ -13,8 +13,14 @@ import { HomeComponent } from './Home/Home.component';
 
 import { ChangeDetectionComponent } from './ChangeDetection/ChangeDetection.component';
 import { AppChanelComponent } from './appChanel/appChanel.component';
-import { Observable } from 'rxjs';
 import { ObservableComponent } from './RXJS/Observable/Observable.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
+import { LyfeCycleComponent } from './LyfeCycle/LyfeCycle.component';
+import { OperatorComponent } from './RXJS/Operator/Operator.component';
+import { SUBModule } from './sub/sub.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +29,9 @@ import { ObservableComponent } from './RXJS/Observable/Observable.component';
     ChangeDetectionComponent,
     AppChanelComponent,
     ObservableComponent,
+    LyfeCycleComponent,
+    OperatorComponent,
+
    ],
   imports: [
     BrowserModule,
@@ -30,6 +39,11 @@ import { ObservableComponent } from './RXJS/Observable/Observable.component';
     HttpClientModule,
     FormsModule,
     StudentModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatRadioModule,
+    SUBModule,
+
   ],
   providers: [
     StudentService,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fromEvent, from, Observable,of } from 'rxjs';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-Observable',
   templateUrl: './Observable.component.html',
@@ -8,7 +9,7 @@ import { fromEvent, from, Observable,of } from 'rxjs';
 export class ObservableComponent implements OnInit {
    getResult = (num: number) =>{
     if(num % 2 ==0){
-      throw new Error('invaled number');
+      throw new Error('invaled number lol hung');
 
     }return num*2
    }
@@ -39,24 +40,35 @@ export class ObservableComponent implements OnInit {
   // myObservable2 = Observable.create((observer) => {
 
   // })
-  // arrayNumber = [1,2,3,4,5]
-  // arrayChar = ['A','B','C','D']
-  // ObserverOfSomething = of(this.arrayNumber,this.arrayChar)
   ngOnInit() {
-    //hàm call back đầu tiên thực thi mỗi khi obervable trả về new data, còn call back thứ 2 sẽ được thực thi khi observable trả về erro
-    this.myObservable.subscribe( (data) =>{
-
-     console.log(data)
-    },(error) => {
-     // error này sẽ được gán với đới tượng erro ở trong observalbe ở trên
-     // trong này ta sẽ xử lý logic khi xảy ra lỗi
-     // đây cũng là chỗ khác với promise là ta có thể handle erro nếu nó xảy ra vì nó không trả về nguyên pack data như promise
-     alert(error.messsage)
-
-    }, ()=>{
-      // ở call back thứ 3 thì ta không cần tham số vì đã hoàn thành việc hứng data, ở đây ta sẽ xử lý với data sau khi observale đã trả về một tín hiệu đầy đủ.
-     alert('Complete')
+    // hàm call back đầu tiên thực thi mỗi khi obervable trả về new data, còn call back thứ 2 sẽ được thực thi khi observable trả về erro
+    // this.myObservable.subscribe( (data) =>{
+    //  console.log(data)
+    // },(error) => {
+    //  // error này sẽ được gán với đới tượng erro ở trong observalbe ở trên
+    //  // trong này ta sẽ xử lý logic khi xảy ra lỗi
+    //  // đây cũng là chỗ khác với promise là ta có thể handle erro nếu nó xảy ra vì nó không trả về nguyên pack data như promise
+    //  alert(console.log(error))
+    // }, ()=>{
+    //   // ở call back thứ 3 thì ta không cần tham số vì đã hoàn thành việc hứng data, ở đây ta sẽ xử lý với data sau khi observale đã trả về một tín hiệu đầy đủ.
+    //  alert('Complete')
+    // })
+    this.myObservable.subscribe({
+      next(data){
+        console.log(data)
+      },
+      error(err){
+        console.log('somethingwrong')
+      },
+      complete(){
+        console.log('done')
+      }
     })
+
+
+
+
+
   }
 
 }
