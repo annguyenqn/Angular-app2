@@ -20,7 +20,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import { LyfeCycleComponent } from './LyfeCycle/LyfeCycle.component';
 import { OperatorComponent } from './RXJS/Operator/Operator.component';
 import { SUBModule } from './sub/sub.module';
-import { TestBoostrapComponent } from './TestBoostrap/TestBoostrap.component';
 import { DropBoxComponent } from './DropBox/DropBox.component';
 import {MatSelectModule} from '@angular/material/select';
 import { RouterModule } from '@angular/router';
@@ -35,7 +34,6 @@ import { RouterModule } from '@angular/router';
     ObservableComponent,
     LyfeCycleComponent,
     OperatorComponent,
-    TestBoostrapComponent,
     DropBoxComponent,
 
    ],

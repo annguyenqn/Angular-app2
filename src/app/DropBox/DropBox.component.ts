@@ -2,15 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { SinhVienService } from '../services/SinhVien.service';
 import { SvDTO } from '../services/SinhVienDto';
 import { ActivatedRoute } from '@angular/router';
+import { StudentService } from '../services/student.service';
+import { student } from '../models/students';
 @Component({
   selector: 'app-DropBox',
   templateUrl: './DropBox.component.html',
   styleUrls: ['./DropBox.component.css']
 })
 export class DropBoxComponent implements OnInit {
-  SinhVienList!:SvDTO[]
+  SinhVienList!:student[]
   selectedStudent!: string;
-  constructor(private sinhVienSerice:SinhVienService) {
+  constructor(private studentSerice:StudentService) {
 
    }
    changeName(e: any){
@@ -18,7 +20,7 @@ export class DropBoxComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.sinhVienSerice.LoadSinhVien().subscribe(
+    this.studentSerice.getStudent().subscribe(
       {
         next:(data) => {this.SinhVienList = data}
       }

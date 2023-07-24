@@ -1,13 +1,17 @@
-<form>
+<!-- <form>
     <mat-form-field>
         <mat-label>Select Student</mat-label>
         <select matNativeControl (change)="changeName($event)">
           <option value="" selected></option>
-          <option *ngFor="let student of SinhVienList" [value]="student.first_name">
-            {{student.first_name}}
+          <option *ngFor="let student of SinhVienList" [value]="student.name">
+            {{student.name}}
           </option>
-
     </select>
     </mat-form-field>
     <p> Selected student: {{selectedStudent}} </p>
-</form>
+</form> -->
+<input list="browsers" name="browser">
+<datalist id="browsers">
+    <option *ngFor="let student of SinhVienList" [value]="student.name">
+    
+  </datalist>
