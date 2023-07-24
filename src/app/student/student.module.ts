@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { StudentTemplateFormComponent } from './student-template-form/student-template-form.component';
 import { HomeComponent } from '../Home/Home.component';
+import { SinhVienService } from '../services/SinhVien.service';
 // import { StudentTemplateFormComponent } from './student-template-form/student-template-form.component';
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
     RouterModule,
   ],
   providers:[
-    StudentService
+    StudentService,
+    SinhVienService,
   ]
 })
 export class StudentModule { }
