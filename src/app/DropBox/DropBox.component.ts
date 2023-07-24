@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SinhVienService } from '../services/SinhVien.service';
 import { SvDTO } from '../services/SinhVienDto';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-DropBox',
   templateUrl: './DropBox.component.html',
@@ -13,7 +13,7 @@ export class DropBoxComponent implements OnInit {
   constructor(private sinhVienSerice:SinhVienService) {
 
    }
-   changeName(e:any){
+   changeName(e: any){
      this.selectedStudent = e.target.value
    }
 
